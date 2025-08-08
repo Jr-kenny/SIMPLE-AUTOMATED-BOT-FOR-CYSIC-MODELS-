@@ -1,0 +1,39 @@
+What is artificial intelligence?
+How does machine learning work?
+Explain neural networks.
+What is the difference between AI and ML?
+What are common AI applications?
+How do chatbots function?
+What is natural language processing?
+Explain deep learning.
+What is supervised learning?
+What is unsupervised learning?
+What is reinforcement learning?
+How is data prepared for AI models?
+What are AI ethics?
+Explain computer vision.
+What is speech recognition?
+How do recommendation systems work?
+What is overfitting in ML?
+What is underfitting in ML?
+Explain transfer learning.
+What are AI biases?
+How do autonomous vehicles work?
+What is the Turing Test?
+How do convolutional neural networks work?
+What is a decision tree?
+Explain random forests.
+What is gradient boosting?
+How do AI models get trained?
+What is the role of big data in AI?
+What is a chatbot?
+Explain the AI winter.
+What is GPT?
+What is BERT in NLP?
+What are transformers?
+Explain attention mechanisms.
+What is backpropagation?
+How do AI models handle errors?
+What is data labeling?
+Explain clustering in ML.
+What is anomaly detection
