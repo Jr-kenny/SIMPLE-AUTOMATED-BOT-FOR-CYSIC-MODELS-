@@ -1,8 +1,10 @@
 import requests
 import json
 import time
+import os
 
-api_key = "YOUR_API_KEY_HERE"
+# Load API key from environment variable (safer)
+api_key = os.getenv("CYSIC_API_KEY", "YOUR_API_KEY_HERE")
 base_url = "https://api-ai.cysic.xyz"
 
 models = [
@@ -38,4 +40,22 @@ def ask_cysic(model, question):
             data=json.dumps(payload)
         )
         response.raise_for_status()
-        return
+        data = response.json()
+
+        # Extract text safely (depends on API structure)
+        if "choices" in data and len(data["choices"]) > 0:
+            return data["choices"][0]["message"]["content"]
+        else:
+            return "⚠️ No response from model."
+
+    except requests.exceptions.RequestException as e:
+        return f"❌ Error with {model}: {e}"
+
+# Main loop
+for question in questions:
+    print(f"\n📝 Question: {question}\n")
+    for model in models:
+        print(f"🤖 Asking {model}...")
+        answer = ask_cysic(model, question)
+        print(f"👉 {model} reply: {answer}\n")
+        time.sleep(2)  # pause to avoid spamming the API
